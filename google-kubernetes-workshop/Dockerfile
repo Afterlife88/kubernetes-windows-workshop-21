@@ -4,7 +4,7 @@ EXPOSE 80
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
-COPY google-kubernetes-workshop/google-kubernetes-workshop.csproj google-kubernetes-workshop/
+COPY /google-kubernetes-workshop.csproj google-kubernetes-workshop/
 RUN dotnet restore google-kubernetes-workshop/google-kubernetes-workshop.csproj
 COPY . .
 WORKDIR /src/google-kubernetes-workshop
