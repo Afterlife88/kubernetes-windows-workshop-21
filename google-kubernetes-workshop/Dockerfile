@@ -7,7 +7,7 @@ WORKDIR /src
 COPY /google-kubernetes-workshop.csproj google-kubernetes-workshop/
 RUN dotnet restore google-kubernetes-workshop/google-kubernetes-workshop.csproj
 COPY . .
-WORKDIR /src/google-kubernetes-workshop
+WORKDIR /src
 RUN dotnet build google-kubernetes-workshop.csproj -c Release -o /app
 
 FROM build AS publish
